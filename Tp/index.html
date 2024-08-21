@@ -8,7 +8,18 @@
     <style src="style.css"></style>
 </head>
 <body>
-<input id="jugador" type="text">
+<input id="jugador" placeholder="introduzca el nombre del jugador" type="text">
+
+<input type="number" placeholder="Seleccione su numero" id="numero">
+
+<select id="posicion">
+    <option value="null" disabled selected>-Posición-</option>
+    <option value="gk">Arquero</option>
+    <option value="def">Defenor</option>
+    <option value="mid">Mediocampista</option>
+    <option value="del">Delantero</option>
+</select>
+
 <button id="agregar" onclick="agregar()">Agregar Jugador</button>
 <button id="limpiar" onclick="limpiar()">Limpiar lista</button>
 <button id="finalizar" onclick="finalizar()">Finalizar Lista</button>
