@@ -64,18 +64,31 @@ function finalizar()
 {
 
 let convocados = document.getElementById("convocados");
+let listaNumeros = document.getElementById("listaNumeros");
+let listaPos =  document.getElementById("listaPos");
 convocados.innerHTML = "";
+listaNumeros.innerHTML = "";
+listaPos.innerHTML = "";
 lista.forEach((lista) => {
     const li = document.createElement("li");
-    li.textContent = lista + " pos:" + posicion + " num:" + numero;
+    li.textContent = lista;
     convocados.appendChild(li);
-
-
-
-
 
 });
 
+numero.forEach((numero) => {
+    const li = document.createElement("li");
+    li.textContent = numero;
+    listaNumeros.appendChild(li);
 
+});
+
+posicion.forEach((posicion) => {
+    const li = document.createElement("li");
+    li.textContent = posicion;
+    listaPos.appendChild(li);
+
+});
+  
 }
 
