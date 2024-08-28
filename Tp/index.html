@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Scaloneta</title>
-    <style src="style.css"></style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<input id="jugador" placeholder="introduzca el nombre del jugador" type="text">
+<input id="jugador" maxlength="20"s placeholder="introduzca el nombre del jugador" type="text">
 
-<input type="number" placeholder="Seleccione su numero" id="numero">
+<input type="number" min="0" max="99" maxlength="2" placeholder="Seleccione su numero" id="numero">
 
 <select id="posicion">
     <option value="null" disabled selected>-Posición-</option>
@@ -24,22 +24,40 @@
 <button id="limpiar" onclick="limpiar()">Limpiar lista</button>
 <button id="finalizar" onclick="finalizar()">Finalizar Lista</button>
 
-<div class="messi">
+
 <h1>Convocados:</h1>
+
+
+<div class="listas">
+
 <div>
+    <p>Nombre</p>
 <ul id="convocados"></ul>
 </div>
 <div>
+<p>Numero</p>
 <ul id="listaNumeros"></ul>
 </div>
 <div>
+    <p>Posición</p>
 <ul id="listaPos"></ul>
 </div>
+
 </div>
 
 
 
     <script src="script.js"></script>
-    
+    <style>
+.listas
+{
+font-size: 30px;
+display: flex;
+justify-content: space-around;
+
+}
+
+
+    </style>
 </body>
 </html>

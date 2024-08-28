@@ -16,11 +16,15 @@ function agregar(jugador, number, pos)
     
 if(cantidadJugadoresRestantes>0)
 {
-number = document.getElementById("numero")
+number = document.getElementById("numero").value
+if (number > 99){
+    number = 99;
+}
+
 pos = document.getElementById("posicion")
 jugador = document.getElementById("jugador");
 lista.push(jugador.value);
-numero.push(number.value);
+numero.push(number);
 posicion.push(pos.value);
 cantidadJugadoresRestantes--;
 
@@ -44,15 +48,16 @@ alert('Se ha alcanzado los 26 jugadores');
 
 
 
-
-
 function limpiar()
 
 {
-numero = numero.splice(0, numero.length);
+numero = numero.splice( numero.length);
 posicion = posicion.splice(0, posicion.lenght);
 lista = lista.splice(0, lista.lenght); 
-cantidadJugadoresRestantes = 26
+cantidadJugadoresRestantes = 26;
+
+finalizar();
+
 
 
 }
